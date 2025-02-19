@@ -18,7 +18,7 @@ export class MyPluginComponent implements AfterViewInit  {
     private renderer: Renderer2,
     private el: ElementRef
   ) {
-    this.button = this.sanitizer.bypassSecurityTrustHtml('<button (click)="myFuncDynamic()">Ciao sono un bottone con la risposta dinamica!</button>');
+    this.button = this.sanitizer.bypassSecurityTrustHtml('<button id="dynamicButton">Ciao sono un bottone con la risposta dinamica!</button>');
   }
 
   ngOnInit(): void {
