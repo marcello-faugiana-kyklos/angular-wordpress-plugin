@@ -2,6 +2,7 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Renderer2 } from '@angular/core';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'cippy-plug',
@@ -11,18 +12,22 @@ import { Renderer2 } from '@angular/core';
 export class MyPluginComponent implements AfterViewInit  {
   public test: string = "";
   public button: SafeHtml;
+  public weather: any;
 
   constructor(
     private http: HttpClient,
     private sanitizer: DomSanitizer,
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
+    private weatherService: WeatherService
   ) {
     this.button = this.sanitizer.bypassSecurityTrustHtml('<button id="dynamicButton">Ciao sono un bottone con la risposta dinamica!</button>');
   }
 
   ngOnInit(): void {
-
+    this.weatherService.getWeather().subscribe(data => {
+      this.weather = data;
+    });
   }
 
   ngAfterViewInit(): void {

@@ -50,3 +50,5 @@ server/nginx/logs/nginx.pid
 /server/**/*.csproj.user
 /server/nginx/logs
 /codegen/*.log
+
+.vs/
