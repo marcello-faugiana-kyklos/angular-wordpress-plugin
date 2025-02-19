@@ -1,0 +1,52 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# repo recursively
+**/repo.lock
+**/.angular
+
+# compiled output
+**/dist
+**/tmp
+**/out-tsc
+
+# dependencies
+**/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Npm & Yarn
+npm-debug.*
+yarn-error.log
+
+/server/.vs
+/server/**/bin
+/server/**/obj
+server/nginx/logs/nginx.pid
+
+/server/**/*.csproj.user
+/server/nginx/logs
+/codegen/*.log
