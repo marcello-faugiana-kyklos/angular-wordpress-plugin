@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   standalone: false,
-  selector: 'app-my-plugin',
+  selector: 'cippy-plug',
   templateUrl: './my-plugin.component.html',
   styleUrls: ['./my-plugin.component.css']
 })
